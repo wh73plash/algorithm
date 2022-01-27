@@ -66,18 +66,13 @@
 //    return ltrim(rtrim(s, t), t);
 //}
 //
-//int rev(int a){
-//    int b = a, cnt = 1, ret = 0;;
-//    while(b / 10){
-//        b /= 10;
-//        cnt *= 10;
+//std::string rev(std::string str){
+//    for(int i = 0; i < str.size() / 2; ++i){
+//        char buffer = str[i];
+//        str[i] = str[str.size() - i - 1];
+//        str[str.size() - i - 1] = buffer;
 //    }
-//    while(a){
-//        ret += (a % 10) * cnt;
-//        cnt /= 10;
-//        a /= 10;
-//    }
-//    return ret;
+//    return str;
 //}
 //
 //int32_t main(const int argc, const char** argv, const char** env) {
@@ -85,9 +80,16 @@
 //    std::cin.tie(nullptr);
 //    std::cout.tie(nullptr);
 //
-//    int a, b;
-//    std::cin >> a >> b;
-//    std::cout << rev(rev(a) + rev(b)) << '\n';
+//    int n, m;
+//    std::cin >> n >> m;
+//    std::vector<std::string> arr(n);
+//    for(auto& i : arr){
+//        std::cin >> i;
+//        i = rev(i);
+//    }
+//    for(const auto& i : arr){
+//        std::cout << i << '\n';
+//    }
 //
 //    return EXIT_SUCCESS;
 //}

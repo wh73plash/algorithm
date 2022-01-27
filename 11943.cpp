@@ -66,28 +66,18 @@
 //    return ltrim(rtrim(s, t), t);
 //}
 //
-//int rev(int a){
-//    int b = a, cnt = 1, ret = 0;;
-//    while(b / 10){
-//        b /= 10;
-//        cnt *= 10;
-//    }
-//    while(a){
-//        ret += (a % 10) * cnt;
-//        cnt /= 10;
-//        a /= 10;
-//    }
-//    return ret;
-//}
-//
 //int32_t main(const int argc, const char** argv, const char** env) {
 //    std::ios::sync_with_stdio(false);
 //    std::cin.tie(nullptr);
 //    std::cout.tie(nullptr);
 //
-//    int a, b;
-//    std::cin >> a >> b;
-//    std::cout << rev(rev(a) + rev(b)) << '\n';
+//    int a, b, c, d;
+//    std::cin >> a >> b >> c >> d;
+//    if(a + d > b + c){
+//        std::cout << b + c << '\n';
+//    }else{
+//        std::cout << a + d << '\n';
+//    }
 //
 //    return EXIT_SUCCESS;
 //}

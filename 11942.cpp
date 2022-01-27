@@ -85,9 +85,8 @@
 //    std::cin.tie(nullptr);
 //    std::cout.tie(nullptr);
 //
-//    int a, b;
-//    std::cin >> a >> b;
-//    std::cout << rev(rev(a) + rev(b)) << '\n';
+//    std::cout << "고려대학교\n";
 //
 //    return EXIT_SUCCESS;
 //}
+//
