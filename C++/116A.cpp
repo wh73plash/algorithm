@@ -71,40 +71,17 @@
 //    std::cin.tie(nullptr);
 //    std::cout.tie(nullptr);
 //
-//    int n, sum = 0;
+//    int n, capacity = 0, max = -1;
 //    std::cin >> n;
-//    int m = n, number[8001] = {0}, most = - 9999, most_val = 0;
-//    bool not_first = false;
-//    std::vector<int> array;
-//    do{
-//        int a;
-//        std::cin >> a;
-//        array.push_back(a);
-//        sum += a;
-//        number[a + 4000]++;
-//    }while(--n);
-//    
-//    std::cout << std::round((double)sum / m) << '\n';
-//    std::sort(array.begin(), array.end());
-//    std::cout << array[array.size() / 2] << '\n';
-//    
-//    for(int i = 0; i < 8001; i++){
-//        if(number[i] == 0)
-//            continue;
-//        if(number[i] == most){
-//            if(not_first){
-//                most_val = i - 4000;
-//                not_first = false;
-//            }
-//        }
-//        if(number[i] > most){
-//            most = number[i];
-//            most_val = i - 4000;
-//            not_first = true;
+//    for(int i = 0; i < n; ++i){
+//        int a, b;
+//        std::cin >> a >> b;
+//        capacity += -a + b;
+//        if(max < capacity){
+//            max = capacity;
 //        }
 //    }
-//    std::cout << most_val << '\n';
-//    std::cout << array.back() - array.front() << '\n';
+//    std::cout << max << '\n';
 //
 //    return EXIT_SUCCESS;
 //}
