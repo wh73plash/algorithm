@@ -1,20 +1,11 @@
-use std::io;
-
 fn main(){
-    let mut input_number = String::new();
-
-    io::stdin().read_line(&mut input_number)
-        .expect("Falied to read line");
-
-    let numbers: Vec<&str> = input_number.split_whitespace().collect();
-
-    let a = match numbers[0].parse::<i32>() {
-        Ok(i) => i,
-        Err(_e) => { -1 }
-    };
-
-    for i in 1..=9{
-        println!("{} * {} = {}", a, i, a * i);
+    let mut buffer = String::new();
+    std::io::stdin().read_line(&mut buffer).expect("Failed to read line");
+    let buff : Vec<i32> = buffer.split_whitespace().map(|s| s.trim().parse().expect("parsing error")).collect::<Vec<_>>();
+    let mut a : i32 = 1;
+    while a <= 9 {
+        println!("{} * {} = {}", buff[0], a, buff[0] * a);
+        a += 1;
     }
 
     return;

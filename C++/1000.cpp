@@ -1,4 +1,5 @@
 //#pragma region include
+//#pragma warning(disable : 4996)
 //#include <cassert>
 //#include <cctype>
 //#include <cerrno>
@@ -51,15 +52,28 @@
 //
 //using namespace std;
 //
+//inline std::string& ltrim(std::string& s, const char* t = " \t\n\r\f\v") {
+//    s.erase(0, s.find_first_not_of(t));
+//    return s;
+//}
+//
+//inline std::string& rtrim(std::string& s, const char* t = " \t\n\r\f\v") {
+//    s.erase(s.find_last_not_of(t) + 1);
+//    return s;
+//}
+//
+//inline std::string& trim(std::string& s, const char* t = " \t\n\r\f\v") {
+//    return ltrim(rtrim(s, t), t);
+//}
+//
 //int32_t main(const int argc, const char** argv, const char** env) {
-//	std::ios::sync_with_stdio(false);
-//	std::cin.tie(nullptr);
-//	std::cout.tie(nullptr);
+//    std::ios::sync_with_stdio(false);
+//    std::cin.tie(nullptr);
+//    std::cout.tie(nullptr);
 //
-//	int a, b;
-//	
-//	std::cin >> a >> b;
-//	std::cout << a + b << std::endl;
+//    int a, b;
+//    std::cin >> a >> b;
+//    std::cout << a + b << '\n';
 //
-//	return EXIT_SUCCESS;
+//    return EXIT_SUCCESS;
 //}
